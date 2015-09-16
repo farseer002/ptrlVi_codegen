@@ -13,8 +13,24 @@ public void fetchData(){
         #Template_Class_Lower#_s.add(new #Template_Class#Data());
     }
 }
-public void initPullToRefreshListView(PullToRefreshListView ptrlVi, #Template_Class#Adapter adapter) {
+public void initPullToRefreshListView(PullToRefreshListView ptrlVi) {
     ptrlVi.setMode(Mode.DISABLED);
     // rtflv.setOnRefreshListener(new MyOnRefreshListener2(ptrlVi));
-    ptrlVi.setAdapter(adapter);
 }
+
+
+<com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ptrlVi_#Template_Class_Lower#"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:divider="@null"
+            android:fadingEdge="none"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:scrollbars="@null"
+            android:smoothScrollbar="true"
+            ptr:ptrAnimationStyle="flip" />

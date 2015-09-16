@@ -3,7 +3,6 @@ import os,sys
 debug = False
 def main():
     
-
     if len(sys.argv) < 2:
         print 'error'
         exit()
@@ -27,6 +26,14 @@ def main():
     replaceTemplateFile(template_file_name,replace_file_name,replace_dict)
 
 
+    template_file_name = 'template_volley.java'
+    replace_file_name = template_class_name + '_volley.java'
+    template_class_name_lower = (template_class_name[0:1]).lower() + template_class_name[1:]
+    replace_dict = {'#Template_Class#':template_class_name,'#Template_Class_Lower#':template_class_name_lower}
+
+    replaceTemplateFile(template_file_name,replace_file_name,replace_dict)
+    
+    
 def replaceTemplateFile(template_file_name,replace_file_name,replace_dict):
     global debug
     content = None
